@@ -1,0 +1,25 @@
+From 9f6300f52c73214ad01b1a613c98c3bfb5afd3d0 Mon Sep 17 00:00:00 2001
+From: CODeRUS <coderusinbox@gmail.com>
+Date: Fri, 22 Aug 2014 13:31:09 +0600
+Subject: [PATCH 1/1] Disable word snap on selection
+
+---
+ chrome/embedlite/content/SelectionHandler.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/usr/lib/mozembedlite/chrome/embedlite/content/SelectionHandler.js b/usr/lib/mozembedlite/chrome/embedlite/content/SelectionHandler.js
+index 3f77aba..35ff206 100644
+--- a/usr/lib/mozembedlite/chrome/embedlite/content/SelectionHandler.js
++++ b/usr/lib/mozembedlite/chrome/embedlite/content/SelectionHandler.js
+@@ -46,7 +46,7 @@ var SelectionHandler = {
+   _domWinUtils: null,
+   _selectionMoveActive: false,
+   _debugOptions: { dumpRanges: false, displayRanges: false },
+-  _snap: true,
++  _snap: false,
+ 
+   init: function init() {
+     addMessageListener("Browser:SelectionStart", this);
+-- 
+1.9.1
+
